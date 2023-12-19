@@ -15,7 +15,7 @@ legacysupport.use_mp_libcxx yes
 
 github.setup        TileDB-Inc TileDB 2.18.2
 name                tiledb
-revision            0
+revision            1
 categories          databases
 license             MIT
 maintainers         {@barracuda156 gmail.com:vital.had} openmaintainer
@@ -79,6 +79,7 @@ compiler.blacklist-append   {clang < 1400}
 # https://github.com/TileDB-Inc/TileDB/issues/4070
 configure.args-append \
                     -DCATCH_INCLUDE_DIR:STRING=${prefix}/include \
+                    -DCOMPILER_SUPPORTS_AVX2=OFF \
                     -DTILEDB_ABSEIL=OFF \
                     -DTILEDB_ASSERIONS=OFF \
                     -DTILEDB_AZURE=OFF \
