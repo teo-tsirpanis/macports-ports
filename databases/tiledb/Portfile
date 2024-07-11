@@ -112,7 +112,7 @@ configure.cflags-append \
                     -DSPDLOG_FMT_EXTERNAL=1
 
 configure.ldflags-append \
-                    -L${prefix}/lib/libfmt${libfmt_ver} -lfmt
+                    -L${prefix}/lib/libfmt${libfmt_ver} -lfmt -lc++abi
 
 platform darwin {
     if {${os.major} < 11 && [string match *gcc* ${configure.compiler}]} {
