@@ -79,6 +79,9 @@ if {[string match *gcc* ${configure.compiler}] && ${configure.build_arch} in [li
 # linkage-agnostic targets.
 patchfiles-append   lz4_fix.diff
 
+# Patch TileDB to include the <exception> header, hopefully fixing link errors.
+patchfiles-append   patch-exception.diff
+
 compiler.cxx_standard       2020
 # https://github.com/TileDB-Inc/TileDB/issues/4566
 compiler.blacklist-append   {clang < 1400}

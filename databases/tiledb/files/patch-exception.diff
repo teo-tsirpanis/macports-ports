@@ -1,0 +1,24 @@
+From eef8de52ccff85d5266d37d09dde1461a746e0d8 Mon Sep 17 00:00:00 2001
+From: Theodore Tsirpanis <theodore.tsirpanis@tiledb.com>
+Date: Thu, 11 Jul 2024 18:35:13 +0300
+Subject: [PATCH 1/1] Add missing `<exception>` header.
+
+---
+ tiledb/sm/misc/parallel_functions.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git tiledb/sm/misc/parallel_functions.h tiledb/sm/misc/parallel_functions.h
+index a30b64234..2e742d415 100644
+--- tiledb/sm/misc/parallel_functions.h
++++ tiledb/sm/misc/parallel_functions.h
+@@ -38,6 +38,7 @@
+ 
+ #include <algorithm>
+ #include <cassert>
++#include <exception>
+ 
+ using namespace tiledb::common;
+ 
+-- 
+2.45.1.windows.1
+
